@@ -1,0 +1,112 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="home-container">
+  <div class="home__header">
+    <div class="home__header__left">
+      <img src="assets/twitter-head.png" alt="logo" mat-card-avatar>
+      <div class="input">
+        <mat-icon class="search-icon">search_outline</mat-icon>
+        <form>
+          <input type="text" placeholder="Search Twitter">
+        </form>
+      </div>
+    </div>
+    <div class="home__header__middle">
+      <div class="active">
+        <mat-icon>home</mat-icon>
+      </div>
+      <div>
+        <mat-icon>ondemand_video</mat-icon>
+      </div>
+      <div>
+        <mat-icon>store</mat-icon>
+      </div>
+      <div>
+        <mat-icon>group</mat-icon>
+      </div>
+      <div>
+        <mat-icon>flag</mat-icon>
+      </div>
+    </div>
+    <div class="home__header__right">
+      <div>
+        <img src="" alt="avatar" mat-card-avatar>
+        <span class="name">MY NAME</span>
+      </div>
+
+      <div>
+        <mat-icon>add</mat-icon>
+      </div>
+      <div>
+        <mat-icon matBadge="4" matBadgeColor="primary" matBadgeOverlap="false"
+          matBadgePosition="above after">forum</mat-icon>
+      </div>
+
+      <div>
+        <mat-icon matBadge="3" matBadgeColor="warn" matBadgeOverlap="false"
+          matBadgePosition="above after">notifications</mat-icon>
+      </div>
+
+    </div>
+    <mat-icon [matMenuTriggerFor]="menu">expand_more</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon> Logout
+      </button>
+    </mat-menu>
+
+  </div>
+
+  <div class="home__body__contentMiddle">
+
+    <div class="home__body__contentMiddle__top">
+      <!--IMAGE CARDS-->
+      <mat-card *ngFor="let i of images" class="image-card">
+        <img alt="bg" class="bg" src="{{ i }}">
+        <mat-card-content>
+          <img alt="avatar" class="avatar"
+            src="https://scontent.fdel8-1.fna.fbcdn.net/v/t1.0-1/cp0/p50x50/15078703_10211571832470683_2854551810050518303_n.jpg?_nc_cat=105&_nc_sid=7206a8&_nc_ohc=YSQBDLYrXHgAX_7KBWW&_nc_ht=scontent.fdel8-1.fna&oh=298837f1c1ebe1f884ce2525d31f39b1&oe=5F6F741A">
+          <span class="card-name">Indranil Mukherjee</span>
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+
+    <div class="home__body__contentMiddle__center">
+      <mat-card class="post-message">
+        <mat-card-header class="post-message-header" style="padding-bottom: 20px;  border-bottom: 1px solid lightgray;">
+          <img alt="" mat-card-avatar [src]="">
+          <form #form="ngForm" (ngSubmit)="postMessage(form)">
+            <input class="on-your-mind" name="message" ngModel placeholder="What's on your mind?" type="text">
+            <button type="submit">Post</button>
+          </form>
+
+
+        </mat-card-header>
+        <mat-card-content class="card-body">
+          <div class="box">
+            <mat-icon color="accent">videocam</mat-icon>
+            <span>Live Video</span>
+          </div>
+
+          <div class="box2">
+            &nbsp;&nbsp;<mat-icon color="primary">photo_album</mat-icon>
+            <span>Photo/Video</span>
+          </div>
+
+          <div class="box3">
+            &nbsp;<mat-icon color="warn">mood</mat-icon>
+            <span>Feeling/Activity</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="box4">
+        <mat-card-content>{{displayVal.message}}</mat-card-content>
+      </mat-card>
+     </div>
+    </div>
+
+ <div class="home__body__feedRight">
+    <div class="inside">
+      <img alt="feed" src="assets/feed.png" height="600" width="400" style="margin-bottom: 480px;">
+     </div>
+  </div>

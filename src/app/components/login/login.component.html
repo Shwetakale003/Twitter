@@ -1,0 +1,31 @@
+<div class="login-container">
+    <header class="login__header">
+<div class="login__header__left">
+  <img src="assets/twitter-logo.png" alt="logo">
+  <h2>Twitter helps you connect and share your  <br>
+    thoughts with the people in your life.</h2>  
+</div>
+
+<div class="login__header__right" >
+    <mat-card class="login__header__right__card">
+        <mat-card-content class="login__header__right__card__content">
+            <form #form="ngForm" class="login-form" (ngSubmit)="login(form)">
+               <input type="text" FormControlName="email" ngModel placeholder="Email address or phone number"  required>
+               <input type="password" FormControlName="password" ngModel placeholder="password" required>
+                <button type="submit"
+                class="login-button" 
+                 routerLink="home">Log in</button>
+            </form>
+         <br><a href="#" style="color: blue;">Forgotten account?</a>
+            <hr>
+            <button class="create-account" click="openRegister()" routerLink="register">Create New Account</button>
+        </mat-card-content>
+    </mat-card>
+
+    <P class="tagline"><strong>Create a Page</strong>  for a celebrity, brand or business.</P>
+
+</div>
+
+    </header>
+   
+</div>
