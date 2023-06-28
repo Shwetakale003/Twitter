@@ -9,6 +9,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { MaterialModule } from './shared/material/material.module';
 import{FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     HomeComponent,
    
+   
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  MatInputModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

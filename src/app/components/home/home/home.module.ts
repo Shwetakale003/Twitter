@@ -13,7 +13,7 @@ import{MatMenuModule} from '@angular/material/menu';
   declarations: [],
   imports: [
     CommonModule,
-    
+    MatIconModule
   ]
 })
 export class HomeModule { }

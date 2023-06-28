@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,23 +8,57 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent {
 
-  images: any[] = [
-    'https://images-na.ssl-images-amazon.com/images/I/51DR2KzeGBL._AC_.jpg',
-    'https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg',
+ 
+  searchQuery: string;
+  showSearchHint: boolean = false;
+
+  userProfilePhoto = 'assets/profile.jpg';
+  tweetMessage = '';
+  tweets: Tweet[] = [];
+
+
+
+  toggleSearchHint(): void {
+    this.showSearchHint = !this.showSearchHint;
+  }
+ 
+
+  postTweet() {
+    if (this.tweetMessage) {
+      const newTweet: Tweet = {
+        username: 'Shweta Kale',
+        handle: 'shweta',
+        message: this.tweetMessage,
+        image: 'https://images.unsplash.com/your-image-url',
+        likes: 0,
+       comments: []
+      };
+
+      this.tweets.unshift(newTweet);
+      this.tweetMessage = ''; 
+    }
+  }
+
+  likePost(tweet: any) {
     
-    'https://cdn.pixabay.com/photo/2017/07/18/18/24/dove-2516641_960_720.jpg',
-    'https://c0.wallpaperflare.com/preview/956/761/225/5be97da101a3f.jpg',
-    'https://upload.wikimedia.org/wikipedia/commons/9/9a/Swepac_FB_465%2C_RV70%2C_with_passing_lorry.jpg'
-  ];
-
-  constructor(){
-
-  }
-  displayVal:any={};
-  postMessage(form:NgForm):void{
-    console.log(form.value)
-    this.displayVal=form.value;
-
+    tweet.likes++;
   }
 
+  promptComment(tweet: any) {
+    const comment = prompt('Enter your comment:');
+    if (comment) {
+      tweet.comments.push(comment);
+    }
+  }
 }
+
+interface Tweet {
+  username: string;
+  handle: string;
+  message: string;
+  image: string;
+  likes: number; 
+  comments: string[];
+}
+
+
