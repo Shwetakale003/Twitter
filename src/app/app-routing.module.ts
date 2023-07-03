@@ -5,6 +5,7 @@ import { HomeModule } from './components/home/home/home.module';
 
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,11 @@ component:RegisterComponent,
   {
     path:'home',
     component: HomeComponent
-  }
+  },
+  {
+    path:'signup',
+component : SignupComponent,
+   }
 ];
 
 

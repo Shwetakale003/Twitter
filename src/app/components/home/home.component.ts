@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,7 +9,29 @@ import { FormControl } from '@angular/forms';
 })
 export class HomeComponent {
 
- 
+  posts1: any[];
+  posts2: any[];
+
+  constructor(private http: HttpClient) {
+    this.fetchData();
+  }
+  fetchData() {
+    this.http.get<any>('assets/homedata.json').subscribe(
+      (data) => {
+        this.posts1 = data.posts1;
+        this.posts2 = data.posts2;
+        console.log(data); // Logging the fetched data
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+
+
+
+
+
   searchQuery: string;
   showSearchHint: boolean = false;
 

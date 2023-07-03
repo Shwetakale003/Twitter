@@ -70,50 +70,46 @@
 
 
 <!-- post starts -->
-<div class="b1">
-<div class="post__body">
-  <div class="post__header">
-    <div class="post__headerText">
-        <div class="background-image">
-            <img src="assets/background.jpg" alt="Background Image">
-            <div class="overlay-image">
-                <img src="assets/profile.jpg" alt="avatar" mat-card-avatar />
+<div *ngFor="let user of users"  class="b1">
+  <div class="post__body">
+    <div class="post__header">
+      <div class="post__headerText">
+          <div class="background-image">
+              <img [src]="user.backgroundImage" alt="Background Image">
+              <div class="overlay-image">
+                  <img [src]="user.avatar" alt="Profile Picture" mat-card-avatar />
+              </div>
             </div>
-          </div>
-     <br><br> <h3><b>Shweta Kale   </b> </h3>
-        <span class="post__headerSpecial">
-          <span class="material-icons post__badge"></span>@SHWETA003
-        </span>
-     
-   
-    </div>
-    <div class="post__headerDescription">
-      <p>| Computer Engineer
-        <br>| Build, create, design, and have it fail. Learn, read, fix, and start over. Such is the engineer’s way.
+            <br><br> <h3><b>{{user.name}}   </b> </h3>
+          <span class="post__headerSpecial">
+             <span class="material-icons post__badge"></span>{{user.username}} 
+          </span>
+       </div>
+      <div class="post__headerDescription">
+        <p> {{ user.bio }}  
+        </p>
+        <p> {{ user.description }}
+          </p>
         
-      </p>
-      
+      </div>
     </div>
+  
+    <div class="post__footer">
+     
+      <span class="material-icons">location_on </span>
+      <p> {{ user.location }}</p>
+      <span class="material-icons"> location_city </span>
+      <p>{{ user.birthdate }}</p>
+      <span class="material-icons">today</span>
+     <p>{{ user.joinedDate }}</p>
+     </div>
+     <div class="f1">
+     <br> <p><b>{{ user.followers }} </b>Following &nbsp;&nbsp; <b> {{ user.following }} </b>Followers</p>
+     </div>
   </div>
-
-  <div class="post__footer">
-   
-    <span class="material-icons">location_on </span>
-    <p> Satara,India</p>
-    <span class="material-icons"> location_city </span>
-    <p>Born Feb 17, 2001</p>
-    <span class="material-icons">today</span>
-   <p>Joined May 2023</p>
-   </div>
-   <div class="f1">
-   <br> <p><b>217 </b>Following &nbsp;&nbsp; <b> 75 </b>Followers</p>
-   </div>
-</div>
-</div>
-
-
-
-</div> 
+  </div>
+  
+  </div>
 <!-- post ends -->
 
 

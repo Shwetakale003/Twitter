@@ -11,6 +11,8 @@ import{FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './components/signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    SignupComponent,
    
    
   ],
@@ -29,7 +32,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     FormsModule,
   ReactiveFormsModule,
   MatInputModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

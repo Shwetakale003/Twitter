@@ -1,0 +1,27 @@
+{
+    "posts1": [
+      {
+        "name": "Shweta Kale",
+        "username": "@shweta",
+        "avatar": "assets/profile.jpg",
+        "description": 
+            "Exercise is physical activity that we have to perform on a repetitive basis for relaxing our body and <br>taking away all the mental stress. It is important to do regular exercise. When you do this on a daily<br> basis, you become fit both physically and mentally. Moreover, not exercising daily can make a person<br>susceptible to different diseases. Thus, just like eating food daily, we must also exercise daily.",
+
+          
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXhlcmNpc2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "verified": true,
+        "hashtag":"#doeveryday"
+      }
+    ],
+    "posts2": [
+      {
+        "name": "Shweta Kale",
+        "username": "@Shweta",
+        "avatar": "assets/profile.jpg",
+        "description": "In order to conserve nature, we must take drastic steps right away to prevent any further damage.<br>The most important step is to prevent deforestation at all levels.",
+        "image": "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "verified": true,
+        "hashtag":"#savelife"
+      }
+    ]
+  }

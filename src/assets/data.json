@@ -1,0 +1,15 @@
+[
+    {
+    "name": "Shweta Kale",
+    "username": "@SHWETA003",
+    "avatar": "assets/profile.jpg",
+    "backgroundImage": "assets/background.jpg",
+    "bio": " | Computer Engineer",
+    "description":"| Build, create, design, and have it fail. Learn, read, fix, and start over. Such is the engineer’s way.",
+    "location": "Satara, India",
+    "birthdate": "Feb 17, 2001",
+    "joinedDate": "May 2023",
+    "following": 217,
+    "followers": 75
+}
+]

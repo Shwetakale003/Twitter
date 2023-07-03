@@ -9,40 +9,35 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit{
  
- // constructor(){}
- ngOnInit(): void {
+  ngOnInit(): void {
     
- }
-
-
-loginForm: FormGroup;
-
-constructor(private formBuilder: FormBuilder, private router: Router) {
-  this.loginForm = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required]
-  });
-}
-
-login(): void {
-  if (this.loginForm.invalid) {
-    // Perform actions if the form is invalid (e.g., display error messages)
-    return;
   }
-
-  // Form is valid, proceed with the login process
-  const email = this.loginForm.value.email;
-  const password = this.loginForm.value.password;
-
-  
-
-  // If login is successful, navigate to the home page
-  this.router.navigate(['/home']);
-}
-
-openRegister(): void {
-  // Perform actions for opening the registration page
-}
-}
-
-
+ 
+ 
+ loginForm: FormGroup;
+ 
+ constructor(private formBuilder: FormBuilder, private router: Router) {
+   this.loginForm = this.formBuilder.group({
+     email: ['', [Validators.required, Validators.email]],
+     password: ['', Validators.required]
+   });
+ }
+ 
+ login(): void {
+   if (this.loginForm.invalid) {
+   
+     return;
+   }
+ 
+   
+   const email = this.loginForm.value.email;
+   const password = this.loginForm.value.password;
+ 
+ 
+   this.router.navigate(['/home']);
+ }
+ 
+ openRegister(): void {
+   
+ }
+ }

@@ -1,0 +1,26 @@
+<section class="register">
+    <div class="header">
+        <br><h3>
+           Create your account
+        </h3>
+        <p>
+            It's quick and easy
+        </p>
+    </div>
+    <div class="body">
+        <form #form="ngForm" (ngSubmit)="submitForm(form)">
+            <div class="user_name">
+                &nbsp; &nbsp; &nbsp;<input type="text" placeholder="FirstName" name="fname" [(ngModel)]="firstName" required>
+                <input type="text" placeholder="LastName" name="lname" [(ngModel)]="lastName" required>
+            </div><br>
+            <div class="email_password">
+                <input type="email" placeholder="Email" name="email" [(ngModel)]="email" required><br>
+                <input type="password" placeholder="Password" name="password" [(ngModel)]="password" required>
+            </div>
+           <br> <p>
+                By clicking Sign Up, you agree to our Terms, Data Policy, and Cookie Policy. You may receive SMS notification from us and can opt out at any time.
+            </p>
+            <button type="submit" class="submit-button" [disabled]="!form.valid" routerLink="">Sign Up</button>
+        </form>
+    </div>
+</section>
